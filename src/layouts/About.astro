@@ -51,6 +51,29 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			.last-updated-on {
 				font-style: italic;
 			}
+			/* Añade un contenedor flex para la imagen y el texto */
+			.card {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			/* Ajusta el tamaño y la posición de la imagen */
+			.card img {
+				width: 200px;
+				height: 200px;
+				margin: 0;
+			}
+			/* Elimina la fecha y añade el texto "About me" */
+			.card .text {
+				margin-left: 1em;
+			}
+			.card .text .date {
+				display: none;
+			}
+			.card .text .about-me {
+				font-size: 1.5em;
+				font-weight: bold;
+			}
 		</style>
 	</head>
 
