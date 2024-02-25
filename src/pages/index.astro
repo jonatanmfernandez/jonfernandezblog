@@ -4,6 +4,37 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
+<style>
+body.dark-mode {
+	background-color: var(--color-fondo-oscuro);
+	color: var(--color-texto-oscuro);
+  }
+  
+  .switch {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	border: none;
+	border-radius: 50%;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+  }
+  
+  .switch i {
+	font-size: 2rem;
+	color: var(--color-texto-claro);
+	transition: all 0.3s ease;
+  }
+  
+  .switch.dark-mode i {
+	color: var(--color-texto-oscuro);
+  }
+  `;
+</style>
+
 
 <!doctype html>
 <html lang="en">
